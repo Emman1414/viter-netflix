@@ -8,20 +8,20 @@ const HomeBanner = () => {
     <section>
       <div className="wrapper relative text-white">
         <img
-          src={`${imgPath}/banner-wall.jpg`}
+          src={`${imgPath}/banner-wallpaper.jpg`}
           alt=""
-          className="w-screen h-[calc(z)] object-cover relative"
+          className="w-screen h-[calc(100vh-55px)] object-cover relative"
         />
         <div className="banner-content absolute top-80 left-20 ">
-          <p className="mb-2">
-            2022 Mecha 2h 50min <small>HD</small>
+          <p className="mb-2 text-[18px]">
+            2023 Action 1h 50min{" "}
+            <small className="border border-white px-0.5 text-sm">HD</small>
           </p>
-          <h2 className="mb-2">Gundam: Hathaway Flash</h2>
-          <p className="mb-5 max-w-[650px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id debitis
-            doloribus incidunt porro laboriosam saepe ab minima minus libero
-            earum corrupti cum sed, animi nesciunt, eaque labore! Facilis,
-            consectetur temporibus.
+          <h1 className="mb-2 font-bold">LOKI S1: Episode 6</h1>
+          <p className="mb-5 max-w-[650px] text-[20px]">
+            The mercurial villain Loki resumes his role as the God of Mischief
+            in a new series that takes place after the events of “Avengers:
+            Endgame.”
           </p>
           <div className="flex justify-between px-10 max-w-[350px]">
             <button className="bg-secondary text-white rounded-md flex py-2 px-6 gap-2">

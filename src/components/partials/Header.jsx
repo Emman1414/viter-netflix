@@ -1,6 +1,6 @@
 import React from "react";
 import { imgPath } from "../helpers/functions-general";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Search } from "lucide-react";
 
 const Header = () => {
@@ -9,8 +9,11 @@ const Header = () => {
       <div className="container">
         <div className="wrapper flex justify-between items-center">
           <div className="flex gap-10 items-center">
-            <img src={`${imgPath}/netflix-logo.png`} alt="" />
-            <ul className="flex gap-4 text-white">
+            <NavLink to="/">
+              <img src={`${imgPath}/netflix-logo.png`} alt="" />
+            </NavLink>
+
+            <ul className="flex gap-4 text-white text-[18px]">
               <li>
                 <Link to="/">TV Shows</Link>
               </li>
@@ -26,7 +29,7 @@ const Header = () => {
             </ul>
           </div>
           <div>
-            <Search size={18} stroke="white" />
+            <Search size={20} stroke="white" />
           </div>
         </div>
       </div>
