@@ -1,14 +1,15 @@
-import React from 'react'
-import { imgPath } from './components/helpers/functions-general'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
 
 const App = () => {
   return (
-    <>
-      <div>
-        aasdasda
-      </div>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route index element={<HomePage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
