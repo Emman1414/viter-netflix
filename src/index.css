@@ -107,6 +107,12 @@
   .btn-cancel {
     @apply bg-gray-500 text-white hover:bg-opacity-80;
   }
+  .btn-warning {
+    @apply bg-warning text-white hover:bg-opacity-80;
+  }
+  .btn-info {
+    @apply bg-info text-white hover:bg-opacity-80;
+  }
   .table-wrapper {
     @apply max-h-[69vh] overflow-y-auto overflow-x-hidden;
   }

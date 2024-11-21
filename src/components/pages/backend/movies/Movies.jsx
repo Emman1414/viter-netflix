@@ -17,6 +17,9 @@ import SideNavigation from "../partials/SideNavigation";
 import SearchBar from "../partials/SearchBar";
 import Pills from "../partials/Pills";
 import ModalDelete from "../partials/modals/ModalDelete";
+import ModalConfirm from "../partials/modals/ModalConfirm";
+import ModalValidation from "../partials/modals/ModalValidation";
+import ModalError from "../partials/modals/ModalError";
 
 const Movies = () => {
   return (
@@ -121,7 +124,10 @@ const Movies = () => {
           </main>
         </div>
           </section>
-          <ModalDelete/>
+          {/* <ModalDelete/> */}
+          {/* <ModalConfirm/> */}
+          {/* <ModalValidation/> */}
+          <ModalError/>
     </>
   );
 };
