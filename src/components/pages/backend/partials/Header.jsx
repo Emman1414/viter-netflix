@@ -1,5 +1,5 @@
 import React from "react";
-import { imgPath } from "../helpers/functions-general";
+import { imgPath } from "../../../helpers/functions-general";
 import { Link, NavLink } from "react-router-dom";
 import { Search } from "lucide-react";
 
@@ -10,7 +10,7 @@ const Header = () => {
         <div className="wrapper flex justify-between items-center">
           <div className="flex gap-10 items-center">
             <NavLink to="/">
-              <img src={`${imgPath}/netflix-logo.png`} alt="" />
+              <img src={`${imgPath}/logo-netflix.png`} alt="" />
             </NavLink>
 
             <ul className="flex gap-4 text-white text-[18px]">
