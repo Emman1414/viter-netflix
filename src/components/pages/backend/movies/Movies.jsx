@@ -16,6 +16,7 @@ import { imgPath } from "@/components/helpers/functions-general";
 import SideNavigation from "../partials/SideNavigation";
 import SearchBar from "../partials/SearchBar";
 import Pills from "../partials/Pills";
+import ModalDelete from "../partials/modals/ModalDelete";
 
 const Movies = () => {
   return (
@@ -34,90 +35,93 @@ const Movies = () => {
                   Add New
                 </button>
               </div>
-
-              <div className="table-wrapper custom-scroll">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Status</th>
-                      <th>Title</th>
-                      <th>Year</th>
-                      <th>Duration</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {Array.from(Array(8).keys()).map((i) => (
-                      <tr key={i}>
-                        <td>{i + 1}.</td>
-                        <td>
-                          <Pills />
-                        </td>
-                        <td>Wedding Singer</td>
-                        <td>1999</td>
-                        <td>1hr 40mins</td>
-                        <td>
-                          <ul className="table-action">
-                            {true ? (
-                              <>
-                                <li>
-                                  <button
-                                    className="tooltip"
-                                    data-tooltip="View"
-                                  >
-                                    <FileVideo />
-                                  </button>
-                                </li>
-                                <li>
-                                  <button
-                                    className="tooltip"
-                                    data-tooltip="Edit"
-                                  >
-                                    <FilePenLine />
-                                  </button>
-                                </li>
-                                <li>
-                                  <button
-                                    className="tooltip"
-                                    data-tooltip="Archive"
-                                  >
-                                    <Archive />
-                                  </button>
-                                </li>
-                              </>
-                            ) : (
-                              <>
-                                <li>
-                                  <button
-                                    className="tooltip"
-                                    data-tooltip="Restore"
-                                  >
-                                    <ArchiveRestore />
-                                  </button>
-                                </li>
-                                <li>
-                                  <button
-                                    className="tool-tip"
-                                    data-tooltip="Delete"
-                                  >
-                                    <Trash2 />
-                                  </button>
-                                </li>
-                              </>
-                            )}
-                          </ul>
-                        </td>
+              <div className="p-4 bg-secondary rounded-md mt-10">
+                <div className="table-wrapper custom-scroll">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Status</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Duration</th>
+                        <th></th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {Array.from(Array(25).keys()).map((i) => (
+                        <tr key={i}>
+                          <td>{i + 1}.</td>
+                          <td>
+                            <Pills />
+                          </td>
+                          <td>Wedding Singer</td>
+                          <td>1999</td>
+                          <td>1hr 40mins</td>
+                          <td>
+                            <ul className="table-action">
+                              {true ? (
+                                <>
+                                  <li>
+                                    <button
+                                      className="tooltip"
+                                      data-tooltip="View"
+                                    >
+                                      <FileVideo />
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      className="tooltip"
+                                      data-tooltip="Edit"
+                                    >
+                                      <FilePenLine />
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      className="tooltip"
+                                      data-tooltip="Archive"
+                                    >
+                                      <Archive />
+                                    </button>
+                                  </li>
+                                </>
+                              ) : (
+                                <>
+                                  <li>
+                                    <button
+                                      className="tooltip"
+                                      data-tooltip="Restore"
+                                    >
+                                      <ArchiveRestore />
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button
+                                      className="tool-tip"
+                                      data-tooltip="Delete"
+                                    >
+                                      <Trash2 />
+                                    </button>
+                                  </li>
+                                </>
+                              )}
+                            </ul>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                
               </div>
             </div>
             <Footer />
           </main>
         </div>
-      </section>
+          </section>
+          <ModalDelete/>
     </>
   );
 };

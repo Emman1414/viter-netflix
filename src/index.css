@@ -101,12 +101,22 @@
   .btn-add {
     @apply bg-accent text-white hover:bg-opacity-80;
   }
+  .btn-alert {
+    @apply bg-accent text-white hover:bg-opacity-80;
+  }
+  .btn-cancel {
+    @apply bg-gray-500 text-white hover:bg-opacity-80;
+  }
   .table-wrapper {
-    @apply mt-10 p-3 bg-secondary rounded-md max-h-[70vh] overflow-y-auto;
+    @apply max-h-[69vh] overflow-y-auto overflow-x-hidden;
   }
 
   .table-wrapper table {
     @apply w-full text-left;
+  }
+
+  .table-wrapper table thead tr {
+    @apply sticky top-0 bg-primary z-30 py-2.5 h-[41px];
   }
 
   .table-wrapper table tbody tr:hover {
@@ -159,11 +169,13 @@
     @apply relative;
   }
   .tooltip::before {
-    @apply content-[attr(data-tooltip)] absolute -top-2 left-1/2 -translate-x-1/2 p-1.5 bg-black bg-opacity-80 px-2.5 text-[10px] rounded-md transition-all text-white leading-none opacity-0 pointer-events-none;
+    @apply content-[attr(data-tooltip)] absolute -top-5 left-1/2 -translate-x-1/2 p-1.5
+     bg-black bg-opacity-80 px-2.5 text-[10px] rounded-md 
+     transition-all text-white leading-none opacity-0 pointer-events-none z-30;
   }
 
   .tooltip:hover::before {
-    @apply block;
+    @apply opacity-100;
   }
 
   /* .layout-division main > div {

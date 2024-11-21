@@ -22,7 +22,7 @@ const Header2 = () => {
             <Settings />
           </button>
           <button className="size-[30px] rounded-full bg-accent grid place-content-center text-white">
-            RP
+            ED
           </button>
         </div>
       </div>
