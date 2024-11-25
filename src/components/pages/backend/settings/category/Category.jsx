@@ -15,7 +15,6 @@ import {
   setIsAdd,
   setIsConfirm,
   setIsDelete,
-  setIsEdit,
 } from "@/components/store/storeAction";
 import ModalDelete from "../../partials/modals/ModalDelete";
 import ModalConfirm from "../../partials/modals/ModalConfirm";
@@ -54,7 +53,9 @@ const Category = () => {
                 <th>#</th>
                 <th>Status</th>
                 <th>Title</th>
-                <th className="text-[10px]">Category</th>
+                <th className="w-[50%]">Category</th>
+
+                <th></th>
               </tr>
             </thead>
             <tbody>

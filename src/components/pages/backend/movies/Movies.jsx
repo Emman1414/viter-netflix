@@ -1,37 +1,17 @@
-import {
-  Archive,
-  ArchiveRestore,
-  FilePenLine,
-  FileVideo,
-  Moon,
-  Plus,
-  Search,
-  Settings,
-  Trash2,
-} from "lucide-react";
-import React from "react";
-import Header2 from "../partials/Header2";
-import Footer from "../partials/Footer";
-import { imgPath } from "@/components/helpers/functions-general";
-import SideNavigation from "../partials/SideNavigation";
-import SearchBar from "../partials/SearchBar";
-import Pills from "../partials/Pills";
-import ModalDelete from "../partials/modals/ModalDelete";
-import ModalConfirm from "../partials/modals/ModalConfirm";
-import ModalValidation from "../partials/modals/ModalValidation";
-import ModalError from "../partials/modals/ModalError";
-import ToastSuccess from "../partials/ToastSuccess";
-import LoadMore from "../partials/LoadMore";
-import SpinnerWindow from "../partials/SpinnerWindow";
-import SpinnerTable from "../partials/spinners/SpinnerTable";
-import TableLoader from "../partials/TableLoader";
-import IconNoData from "../partials/IconNoData";
-import IconServerError from "../partials/IconServerError";
-import ModalAddMovie from "./ModalAddMovie";
-import MoviesTable from "./MoviesTable";
-import ModalViewMovie from "./ModalViewMovie";
+import { setIsAdd } from "@/components/store/storeAction";
 import { StoreContext } from "@/components/store/storeContext";
-import { setIsAdd, setMessage } from "@/components/store/storeAction";
+import { Plus } from "lucide-react";
+import React from "react";
+import Footer from "../partials/Footer";
+import Header2 from "../partials/Header2";
+import ModalError from "../partials/modals/ModalError";
+import ModalValidation from "../partials/modals/ModalValidation";
+import SearchBar from "../partials/SearchBar";
+import SideNavigation from "../partials/SideNavigation";
+import ToastSuccess from "../partials/ToastSuccess";
+import ModalAddMovie from "./ModalAddMovie";
+import ModalViewMovie from "./ModalViewMovie";
+import MoviesTable from "./MoviesTable";
 
 const Movies = () => {
   const { dispatch, store } = React.useContext(StoreContext);
@@ -39,9 +19,6 @@ const Movies = () => {
   const handleAdd = () => {
     dispatch(setIsAdd(true));
   };
-
-  // const { dispatch } = React.useContext(StoreContext);
-  // const handleChangeLoadmoreText = () => dispatch(setMessage("Loverboy"));
 
   return (
     <>

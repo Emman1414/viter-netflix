@@ -50,7 +50,9 @@ const Genre = () => {
                 <th>#</th>
                 <th>Status</th>
                 <th>Title</th>
-                <th className="text-[10px]">Genre</th>
+                <th className="w-[50%]">Genre</th>
+
+                <th></th>
               </tr>
             </thead>
             <tbody>

@@ -13,7 +13,7 @@ const ModalAddRatings = () => {
     <>
       <ModalWrapper>
         <div className="modal-main bg-primary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[400px] w-full rounded-md border border-line">
-          <div className="modeal-header flex gap-2 p-2 items-center border-b border-line mb-2">
+          <div className="modal-header flex gap-2 p-2 items-center border-b border-line mb-2">
             <span className="text-body">Add Ratings</span>
             <button className="ml-auto" onClick={handleClose}>
               <X />

@@ -50,7 +50,9 @@ const Ratings = () => {
                 <th>#</th>
                 <th>Status</th>
                 <th>Title</th>
-                <th className="text-[10px]">Ratings</th>
+                <th className="w-[50%]">Ratings</th>
+
+                <th></th>
               </tr>
             </thead>
             <tbody>
