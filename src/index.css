@@ -143,6 +143,10 @@
     @apply bg-[#151b25];
   } */
 
+  .table-wrapper table tbody tr {
+    @apply bg-secondary;
+  }
+
   .table-wrapper table tbody tr:nth-child(odd) {
     @apply bg-primary;
   }
@@ -289,7 +293,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
-.index{
-  border: 1px solid rgba(0,0,0,0.5);
+.index {
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }

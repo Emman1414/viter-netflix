@@ -1,37 +1,31 @@
-import React from "react";
-import TableLoader from "../partials/TableLoader";
-import IconServerError from "../partials/IconServerError";
-import Pills from "../partials/Pills";
 import {
   Archive,
   ArchiveRestore,
   FilePenLine,
-  FileVideo,
+  Plus,
   Trash2,
 } from "lucide-react";
-import LoadMore from "../partials/LoadMore";
-import SpinnerTable from "../partials/spinners/SpinnerTable";
-import IconNoData from "../partials/IconNoData";
+import React from "react";
+import TableLoader from "../../partials/TableLoader";
+import IconNoData from "../../partials/IconNoData";
+import IconServerError from "../../partials/IconServerError";
+import Pills from "../../partials/Pills";
 import { StoreContext } from "@/components/store/storeContext";
 import {
-  setIsArchive,
+  setIsAdd,
   setIsConfirm,
   setIsDelete,
   setIsEdit,
-  setIsView,
 } from "@/components/store/storeAction";
-import ModalDelete from "../partials/modals/ModalDelete";
-import ModalConfirm from "../partials/modals/ModalConfirm";
+import ModalDelete from "../../partials/modals/ModalDelete";
+import ModalConfirm from "../../partials/modals/ModalConfirm";
+import ModalAddCategory from "./ModalAddCategory";
 
-const MoviesTable = () => {
+const Category = () => {
   const { store, dispatch } = React.useContext(StoreContext);
 
-  const handleView = () => {
-    dispatch(setIsView(true));
-  };
-
-  const handleEdit = () => {
-    dispatch(setIsEdit(true));
+  const handleAdd = () => {
+    dispatch(setIsAdd(true));
   };
 
   const handleDelete = () => {
@@ -45,12 +39,14 @@ const MoviesTable = () => {
   const handleArchive = () => {
     dispatch(setIsConfirm(true));
   };
-
   return (
     <>
-      <div className="p-4 bg-secondary rounded-md mt-10 border border-line relative">
-        {/* <SpinnerTable /> */}
-        <div className="table-wrapper custom-scroll">
+      <div className="bg-secondary p-4 mt-5 border border-line rounded-md">
+        <button className="btn btn-add" onClick={handleAdd}>
+          <Plus size={16} />
+          Add New
+        </button>
+        <div className="table-wrapper custom-scroll mt-5 max-h-[65vh]">
           {/* <TableLoader count={10} cols={4} /> */}
           <table>
             <thead>
@@ -58,9 +54,7 @@ const MoviesTable = () => {
                 <th>#</th>
                 <th>Status</th>
                 <th>Title</th>
-                <th>Year</th>
-                <th>Duration</th>
-                <th></th>
+                <th className="text-[10px]">Category</th>
               </tr>
             </thead>
             <tbody>
@@ -74,15 +68,14 @@ const MoviesTable = () => {
                   <IconServerError />
                 </td>
               </tr> */}
-              {Array.from(Array(8).keys()).map((i) => (
+              {Array.from(Array(25).keys()).map((i) => (
                 <tr key={i}>
                   <td>{i + 1}.</td>
                   <td>
                     <Pills />
                   </td>
-                  <td>Wedding Singer</td>
-                  <td>1999</td>
-                  <td>1hr 40mins</td>
+                  <td>Rom-Com</td>
+
                   <td>
                     <ul className="table-action">
                       {true ? (
@@ -90,17 +83,8 @@ const MoviesTable = () => {
                           <li>
                             <button
                               className="tooltip"
-                              data-tooltip="View"
-                              onClick={() => handleView()}
-                            >
-                              <FileVideo />
-                            </button>
-                          </li>
-                          <li>
-                            <button
-                              className="tooltip"
                               data-tooltip="Edit"
-                              onClick={() => handleEdit()}
+                              onClick={() => handleAdd()}
                             >
                               <FilePenLine />
                             </button>
@@ -130,7 +114,7 @@ const MoviesTable = () => {
                             <button
                               className="tool-tip"
                               data-tooltip="Delete"
-                              onClick={handleDelete}
+                              onClick={() => handleDelete()}
                             >
                               <Trash2 />
                             </button>
@@ -143,15 +127,13 @@ const MoviesTable = () => {
               ))}
             </tbody>
           </table>
-
-          <LoadMore />
         </div>
       </div>
-
+      {store.isAdd && <ModalAddCategory />}
       {store.isDelete && <ModalDelete />}
       {store.isConfirm && <ModalConfirm />}
     </>
   );
 };
 
-export default MoviesTable;
+export default Category;

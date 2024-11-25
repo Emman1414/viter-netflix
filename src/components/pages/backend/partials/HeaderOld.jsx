@@ -3,7 +3,7 @@ import { imgPath } from "../../../helpers/functions-general";
 import { Link, NavLink } from "react-router-dom";
 import { Search } from "lucide-react";
 
-const Header = () => {
+const HeaderOld = () => {
   return (
     <section className="bg-primary py-4">
       <div className="container">
@@ -37,4 +37,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderOld;

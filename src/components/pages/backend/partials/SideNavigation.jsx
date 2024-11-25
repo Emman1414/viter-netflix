@@ -3,10 +3,10 @@ import { Clapperboard, LayoutDashboard, Star } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const SideNavigation = () => {
+const SideNavigation = ({ menu }) => {
   const links = [
     {
-      title: "dashboard",
+      title: "Dashboard",
       slug: "/admin/dashboard",
       icon: <LayoutDashboard />,
     },
@@ -34,7 +34,11 @@ const SideNavigation = () => {
           <ul className="mt-10">
             {links.map((item, key) => (
               <li
-                className="px-4 py-2 mb-2 rounded-md border border-transparent "
+                className={`${
+                  menu === item.slug.replaceAll("/admin/", "")
+                    ? "border-accent bg-accent bg-opacity-100 text-white"
+                    : ""
+                } px-4 py-2 mb-2 rounded-md border border-transparent opacity-60 hover:opacity-100`}
                 key={key}
               >
                 <NavLink to={`${item.slug}`} className="flex gap-2">
