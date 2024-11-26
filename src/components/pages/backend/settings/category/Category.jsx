@@ -54,7 +54,6 @@ const Category = () => {
                 <th>Status</th>
                 <th>Title</th>
                 <th className="w-[50%]">Category</th>
-
                 <th></th>
               </tr>
             </thead>
@@ -76,7 +75,7 @@ const Category = () => {
                     <Pills />
                   </td>
                   <td>Rom-Com</td>
-
+                  <td></td>
                   <td>
                     <ul className="table-action">
                       {true ? (

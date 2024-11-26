@@ -127,7 +127,7 @@
   }
 
   .table-wrapper table thead tr {
-    @apply sticky top-0 bg-primary z-30 py-2.5 h-[41px];
+    @apply sticky top-0 bg-primary z-30 h-[41px];
   }
 
   .table-wrapper table tbody tr:hover {
@@ -226,18 +226,28 @@
   .input-wrap label {
     @apply text-xs;
   }
-  .input-wrap .show-error {
+  
+  .input-wrap span.error-show {
     @apply absolute top-1 right-0 text-alert text-xs italic;
   }
-  .input-wrap:has(.show-error) label {
+  .input-wrap:has(.error-show) label {
     @apply text-alert;
   }
-  .input-wrap:has(.show-error) input,
-  .input-wrap:has(.show-error) textarea,
-  .input-wrap:has(.show-error) select {
+  .input-wrap:has(.error-show) input,
+  .input-wrap:has(.error-show) textarea,
+  .input-wrap:has(.error-show) select {
     @apply border-alert animate-shake;
   }
-}
+
+  .input-photo-wrap:has(.error-show){
+    @apply border border-alert animate-shake rounded-md;
+  }
+
+  .input-photo-wrap span.error-show{
+    @apply -top-4;
+  }
+
+  }
 
 @layer utilities {
   .center-all {
@@ -295,4 +305,26 @@ input::-webkit-inner-spin-button {
 
 .index {
   border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.swiper {
+  min-height: 320px;
+}
+
+.swiper-pagination {
+  top: -0.2rem !important;
+  left: 45% !important;
+  height: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  border-radius: 0 !important;
+  width: 12px !important;
+  height: 2px !important;
+  margin: 0 1.5px !important;
+}
+
+.slider-parent:has(.group:hover) .slide-nav-btn {
+  opacity: 100;
 }

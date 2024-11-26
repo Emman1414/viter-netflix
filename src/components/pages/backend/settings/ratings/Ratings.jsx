@@ -51,7 +51,6 @@ const Ratings = () => {
                 <th>Status</th>
                 <th>Title</th>
                 <th className="w-[50%]">Ratings</th>
-
                 <th></th>
               </tr>
             </thead>
@@ -73,6 +72,7 @@ const Ratings = () => {
                     <Pills />
                   </td>
                   <td>Rom-Com</td>
+                  <td></td>
 
                   <td>
                     <ul className="table-action">

@@ -1,0 +1,42 @@
+export const Movies = [
+  {
+    movie_aid: 1,
+    movie_title: "Loki",
+    movie_year: "2022",
+    movie_duration: "1hr 50mins",
+    movie_category: "Western",
+    movie_genre: "Action",
+    movie_ratings: "P-13",
+    movie_summary:
+      "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of Avengers: Endgame.",
+    movie_cast: "Loki, Odin",
+    movie_image: "banner-wallpaper.jpg",
+    movie_is_active: true,
+  },
+  {
+    movie_aid: 2,
+    movie_title: "Haikyuu S1",
+    movie_year: "2017",
+    movie_duration: "50mins",
+    movie_category: "Anime",
+    movie_genre: "Anime",
+    movie_ratings: "P-13",
+    movie_summary: "Labanan ng mga Uwak at Ligaw na Pusa Volleyball",
+    movie_image: "movie-1.jpg",
+    movie_is_active: true,
+  },
+  {
+    movie_aid: 3,
+    movie_title: "Venom",
+    movie_year: "2022",
+    movie_duration: "1hr 50mins",
+    movie_category: "Western",
+    movie_genre: "Action",
+    movie_ratings: "P-13",
+    movie_summary:
+      "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.",
+    movie_cast: "Loki, Odin",
+    movie_image: "movie-4.jpg",
+    movie_is_active: true,
+  },
+];

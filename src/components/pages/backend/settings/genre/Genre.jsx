@@ -51,7 +51,6 @@ const Genre = () => {
                 <th>Status</th>
                 <th>Title</th>
                 <th className="w-[50%]">Genre</th>
-
                 <th></th>
               </tr>
             </thead>
@@ -73,6 +72,7 @@ const Genre = () => {
                     <Pills />
                   </td>
                   <td>Rom-Com</td>
+                  <td></td>
 
                   <td>
                     <ul className="table-action">

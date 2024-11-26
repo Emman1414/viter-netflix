@@ -47,7 +47,7 @@ const Movies = () => {
       {store.error && <ModalError />}
       {store.success && <ToastSuccess />}
       {/* <SpinnerWindow /> */}
-      {store.isView && <ModalViewMovie />}
+
       {store.isAdd && <ModalAddMovie />}
     </>
   );

@@ -65,7 +65,6 @@ const Settings = () => {
           </main>
         </div>
       </section>
-
     </>
   );
 };
