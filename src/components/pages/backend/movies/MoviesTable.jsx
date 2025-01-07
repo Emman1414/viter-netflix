@@ -15,7 +15,7 @@ import {
 import React from "react";
 import LoadMore from "../partials/LoadMore";
 import ModalConfirm from "../partials/modals/ModalConfirm";
-import ModalDelete from "../partials/modals/ModalDelete";
+import ModalDelete from "../partials/modals/ModalDelete"; 
 import Pills from "../partials/Pills";
 import { Movies } from "./datamovies";
 import ModalViewMovie from "./ModalViewMovie";
